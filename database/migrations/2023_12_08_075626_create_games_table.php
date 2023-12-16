@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('deskripsi');
             $table->string('price');
-            $table->unsignedBigInteger('publisher_id'); // Use unsignedBigInteger here
-            $table->foreign('publisher_id')->references('publisher_id')->on('publishers')->onDelete('cascade');
+            $table->integer('publisher_id');
             $table->date('release_date');
             $table->string('platform');
         });

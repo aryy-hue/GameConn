@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('transaction', function (Blueprint $table) {
             $table->id('transaction_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
+            $table->integer('user_id');
             $table->date('transaction_date');
             $table->string('transaction_status');
         });
